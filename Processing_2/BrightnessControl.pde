@@ -1,12 +1,13 @@
+int leftMagneticPin==2;//change this corresponding to the arduino input used for magnetic sensor on the left bike
+int rightMagneticPin==3;//change this corresponding to the arduino input used for magnetic sensor on the right bike
+
 float timeAL=0;
 float timeBL=1;
 float timeL;
 float tuneTimeL;
 float speedL;
-float brightnessL;
 float lastSpeedL=0;
-
-float distance = 2000; 
+float brightnessL;
 
 float timeAR=0;
 float timeBR=1;
@@ -18,14 +19,15 @@ float brightnessR;
 float brightnessTimeRA;
 float brightnessTimeRB;
 
+float distance = 2000;//this is used to measure the speed of the bike - Note: this is only used when speedcontrol is in effect
+
 void brightnessControlLeft()// function to control brightness of the left half of the screen using magnetic sensors from the left bike
 {
-   if (arduino.digitalRead(2) == Arduino.HIGH)
+   if (arduino.digitalRead(leftMagneticPin) == Arduino.HIGH)
   {
     timeAL=millis();
     timeL=timeAL-timeBL;
-    //prfloatln("time of contact=",time/1000);
-    //delay(1000);
+    //println("time of contact=",time/1000);//debug code to check the time between 2 readings from magnetic sensor
     timeBL=timeAL;
    }
    if(timeL>50)
@@ -33,13 +35,10 @@ void brightnessControlLeft()// function to control brightness of the left half o
    speedL=(60000/timeL);
    k = distance/timeL;
    //delay(100);
-   println("SPEED=",speedL);
-   /*if(speedL>lastSpeedL)
-   {
-   }*/
+   //println("SPEED=",speedL);
+ 
    lastSpeedL=speedL;
-   
-   }
+      }
    brightnessL = 250 - (speedL);
    fill(0, 0, 0, brightnessL); 
    rect(0, 0, width/2, height);
@@ -49,13 +48,12 @@ void brightnessControlRight()// function to control brightness of the right half
 {
    brightnessTimeRA=millis();
    brightnessTimeRB=millis();
-  if (arduino.digitalRead(3) == Arduino.HIGH)
+  if (arduino.digitalRead(rightMagneticPin) == Arduino.HIGH)
   {
    
     timeAR=millis();
     timeR=timeAR-timeBR;
-    //prfloatln("time of contact=",time/1000);
-    //delay(1000);
+    //println("time of contact=",time/1000);//debug code to check the time between 2 readings from magnetic sensor
     timeBR=timeAR;
     brightnessTimeRB=0;
    }
@@ -64,21 +62,11 @@ void brightnessControlRight()// function to control brightness of the right half
    speedR=(60000/timeR);
    j = distance/timeR;
    //delay(100);
-   println("SPEED=",speedR);
-   /*if(speedL>lastSpeedL)
-   {
-   }*/
+   //println("SPEED=",speedR);
+ 
    lastSpeedR=speedR;
    }
-   
-   if (brightnessTimeRB-brightnessTimeRA>2000)
-   {
-     brightnessR=250;
-   }
-   else
-   {
-    brightnessR = 250 - (speedR);
-   }
+   brightnessR = 250 - (speedR);
    fill(0, 0, 0, brightnessR); 
    rect(width/2, 0, width, height);
 }
