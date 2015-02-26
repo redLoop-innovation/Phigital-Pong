@@ -8,8 +8,8 @@ Arduino arduino; // create a variable arduino of the Arduino data type
 
 int cautionDistanceTop=60;//max distance from the Top border of the processing window
 int cautionDistanceBottom=20;//max distance from the bottom border of the processing window
-int potentiometerError1=600;//range of potentiometer is 440-808
-int potentiometerError2=400;
+int potentiometerError1=600;//adjust this according to the range of potentiometer to sync it with the movement of left paddle
+int potentiometerError2=400;//adjust this according to the range of potentiometer to sync it with the movement of left paddle
 float potentiometerResolution=2.5; //adjust resolution for bigger or smaller screens.
 
 void leftPaddleMove()//function to control left paddle through arduino
