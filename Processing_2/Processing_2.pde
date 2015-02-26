@@ -1,4 +1,4 @@
-int error=5;
+
 
 void setup()
 {
@@ -28,7 +28,7 @@ void draw()
   fill(255);
   rect(X,Y,ballW,ballH);//size of the ball
   
-  makeResizable();//function to make the game resizable : Refer to display tab
+  //makeResizable();//function to make the game resizable : Refer to display tab
   //goFullscreen();//function to make the game fullscreen : Refer to display tab
   display();//function to define the display of the projection. This includes the score, power bar, line in the middle and the aesthetic lines to seperate evrything : Refer to Display Tab
   //speedControl();//function to change the speed of the ball according to the rate at which the rider paddles the bike : Refer to SpeedControl Tab

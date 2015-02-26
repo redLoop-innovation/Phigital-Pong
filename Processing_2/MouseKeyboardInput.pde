@@ -1,6 +1,4 @@
 //function to move left paddle with up and down keYs
-//int bar1=constrain(1,0,10);
-//int bar2=constrain(1,0,10);
 
 void keyPressed() {
   if (key=='w'||key=='W')
@@ -53,3 +51,7 @@ if (key == CODED) {
     }
   }
 }
+/*void mouseMoved()
+{
+  YpaddleR = mouseY;
+}*/

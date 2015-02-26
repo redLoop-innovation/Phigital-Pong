@@ -6,6 +6,8 @@ import cc.arduino.*; // reference the arduino library
 
 Arduino arduino; // create a variable arduino of the Arduino data type
 
+int error=5;//this variable is used throughout the code to adjust issues caused by errors in drawing the physical objects and to avoid bugs caused by overlaping of objects
+
 int leftControlPin=1;//change this corresponding to the arduino analog input used for left paddle
 int rightControlPin=0;//change this corresponding to the arduino analog input used for right paddle
 
