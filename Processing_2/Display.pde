@@ -93,6 +93,15 @@ void leftBar()
   }
 }
 //CODE FOR FULLSCREEN
+/*
 boolean sketchFullScreen() {
   return true;
-}
+}*/
+//FUNCTION TO MAKE GAME RESIZABLE
+void makeResizable()
+{
+if (frame != null) //resize code
+    {
+    frame.setResizable(true);
+    }
+}  

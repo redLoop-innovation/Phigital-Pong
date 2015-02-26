@@ -1,9 +1,9 @@
-boolean collisionL()
+boolean collisionL()//function to bounce the ball off left paddle
 {
   boolean returnValue = false;
-  if((ballLeft()-ballW<=XpaddleL)&&(ballLeft()+ballW>=XpaddleL))
+  if((ballRight()>=XpaddleL)&&(ballLeft()<=XpaddleL+paddleLW))
   {
-    if ((ballTop()>=YpaddleL)&&(ballTop()<=YpaddleL+paddleLH))
+    if ((ballBottom()>=YpaddleL)&&(ballTop()<=YpaddleL+paddleLH))
     {
       returnValue = true;
       
@@ -11,12 +11,12 @@ boolean collisionL()
   }
   return returnValue;
 }
-boolean collisionR()
+boolean collisionR()//function to bounce the ball off right paddle
 {
   boolean returnValue = false;
-  if((ballLeft()+ballW>=XpaddleR)&&(ballLeft()-ballW<=XpaddleR))
+  if((ballRight()>=XpaddleR)&&(ballLeft()<=XpaddleR+paddleRW))
   {
-    if ((ballTop()>=YpaddleR)&&(ballTop()<=YpaddleR+paddleRH))
+    if ((ballBottom()>=YpaddleR)&&(ballTop()<=YpaddleR+paddleRH))
     {
       returnValue = true;
       

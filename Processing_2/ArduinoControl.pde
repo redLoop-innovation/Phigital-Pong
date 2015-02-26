@@ -6,8 +6,8 @@ import cc.arduino.*; // reference the arduino library
 
 Arduino arduino; // create a variable arduino of the Arduino data type
 
-int leftControlPin==1;//change this corresponding to the arduino analog input used for left paddle
-int rightControlPin==0;//change this corresponding to the arduino analog input used for right paddle
+int leftControlPin=1;//change this corresponding to the arduino analog input used for left paddle
+int rightControlPin=0;//change this corresponding to the arduino analog input used for right paddle
 
 int cautionDistanceTop=60;//max distance from the Top border of the processing window. Note: this variable is used in various functions to make the game dynamic(everything will adjust itself if you change the size of the screen.
 int cautionDistanceBottom=20;//max distance from the bottom border of the processing window. Note: this variable is used in various functions to make the game dynamic(everything will adjust itself if you change the size of the screen.
