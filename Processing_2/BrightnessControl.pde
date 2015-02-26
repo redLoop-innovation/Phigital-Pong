@@ -1,5 +1,9 @@
+//THIS TAB CONTROLS THE BRIGHTNESS OF THE GAME ACCORDING TO THE SPEED OF BOTH BIKES
+
 int leftMagneticPin=2;//change this corresponding to the arduino input used for magnetic sensor on the left bike
 int rightMagneticPin=3;//change this corresponding to the arduino input used for magnetic sensor on the right bike
+
+//THE FOLLOWING VARIABLES WORK WITHIN THE FUNCTIONS BELOW AND THE FUNCTIONS HAVE BEEN THOROUGHLY TESTED SO THEY NEED NOT TO BE CHANGED
 
 float timeAL=0;
 float timeBL=1;

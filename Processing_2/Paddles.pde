@@ -10,7 +10,7 @@ int paddleRH=200;//height of the right paddle
 float XpaddleR;//X coordiante of the right paddle
 float YpaddleR=300;//Y coordiante of right paddle
 
-float paddleChange=30;//distance at which paddle changes position when keyboard is used
+float paddleChange=30;//distance by which paddle changes position when keyboard is used
 
 
 void paddles()

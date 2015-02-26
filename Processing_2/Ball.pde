@@ -1,3 +1,5 @@
+//THIS TAB DEFINES THE BALL AND CONTAINS FUNCTIONS FOR ITS MOVEMENT AND DIMENSSIONS
+
 float X;//define x cordinate for ball
 float Y;//define y coordinate of the ball
 float ballH=20;//height of the ball

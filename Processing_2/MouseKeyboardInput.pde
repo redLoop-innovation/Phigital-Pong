@@ -1,6 +1,8 @@
-//function to move left paddle with up and down keYs
+//THIS TAB HAS CODE TO CONTROL THE PADDLES USING KEYBOARD AND MOUSE
+//THIS TAB ALSO INCLUDES CODE TO TEST THE POWER BARS USING ARROW KEYS
 
-void keyPressed() {
+void keyPressed()//function to control the paddles using arrow keys on the keyboard and test the power barrs using arrow keys
+{
   if (key=='w'||key=='W')
     {
       YpaddleL = YpaddleL-paddleChange;
@@ -51,7 +53,8 @@ if (key == CODED) {
     }
   }
 }
-/*void mouseMoved()
+
+/*void mouseMoved()//function to control the right paddle using mouse. Note: Change YpaddleR to YpaddleL to control the left paddle
 {
   YpaddleR = mouseY;
 }*/
