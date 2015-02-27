@@ -1,3 +1,6 @@
+//THIS TAB DRAWS THE HOLES WITHIN THE GAME AND CONTAINS FUNCTIONS TO UPDATE SCORE AND DISAPPEAR THE BALL WHEN IT GOES INTO THE HOLE
+
+//LEFT SIDE HOLES
 int hole1Xposition = 450;
 int hole1Yposition = 280;
 int hole1radius = 60;
@@ -6,6 +9,7 @@ int hole2Xposition = 350;
 int hole2Yposition = 150;
 int hole2radius = 40;
 
+//RIGHT SIDE HOLES
 int hole3Xposition = 1380;
 int hole3Yposition = 990;
 int hole3radius = 60;

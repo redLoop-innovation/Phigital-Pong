@@ -1,6 +1,18 @@
 //THIS IS THE MAIN BODY OF THIS GAME AND INCLUDES ALL THE FUNCTIONS THAT RUN THE GAME. TO ADJUST ANYTHING READ COMMENTS AFTER EVERY FUNCTION
 
 //IMPORTANT: TO CHANGE THE SCORE AT WHICH THE GAME ENDS ADJUST endScore VARIABLE IN THE SCORE TAB
+/*
+CONTROLS: 
+1. PRESS LEFT OR RIGHT TO MOVE THE LEFT PADDLE
+2. PRESS UP OR DOWN TO MOVE THE RIGHT PADDLE
+3. PRESS W OR S TO MOVE THE LEFT PADDLE
+4. PRESS LEFT OR RIGHT TO TEST THE RIGHT POWER BAR
+5. PRESS UP OR DOWN TO TEST THE LEFT POWER BAR
+6. PRESS R TO RESET THE GAME
+7. HOLD 1 AND MOVE THE MOUSE TO SET THE LEFT HOLE
+8. HOLD 2 AND MOVE THE MOUSE TO SET THE RIGHT HOLE
+*/
+
 int screenWidth=1600;//adjust this to change the width of the game
 int screenHeight=800;//adjust this to change the height of the game
 
@@ -37,13 +49,13 @@ void draw()
   holeSystem();//function to add holes to the game : Refer to Holes Tab
   ballMovement();//function to make the ball move : Refer to Ball Tab
   paddles();//function to define the paddles on each side : Refer to Paddles Tab
-  //brightnessControlLeft();//Function to change the brightness of left side of the screen : Refer to BrightnessControl Tab
-  //brightnessControlRight();//Function to change the brightness of right side of the screen : Refer to BrightnessControl Tab
+  //brightnessControlLeft();//function to change the brightness of left side of the screen : Refer to BrightnessControl Tab
+  //brightnessControlRight();//function to change the brightness of right side of the screen : Refer to BrightnessControl Tab
   score();//function to update the score of the game : Refer to Score Tab
   //leftPaddleMove();//function to move the left paddle using arduino : Refer to Arduino Control Tab 
   //rightPaddleMove();//function to move the right paddle using arduino : Refer to Arduino Control Tab
-  music();//funtion to play the sound effects : Refer to Music Tab    
-  ballAngle();//Funtion to change the ball angle according to the position it hits the paddle : Refer to BallAngle Tab
+  music();//function to play the sound effects : Refer to Music Tab    
+  ballAngle();//Function to change the ball angle according to the position it hits the paddle : Refer to BallAngle Tab
   
   /*println("Xspeed= ",deltaX);//xspeed display Debugging code to check the horizontal speed of the ball
   println("Yspeed= ",deltaY);//yspeed display Debugging code to check the vertical speed of the ball*/
