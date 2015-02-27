@@ -33,16 +33,17 @@ void brightnessControlLeft()// function to control brightness of the left half o
     timeL=timeAL-timeBL;
     //println("time of contact=",time/1000);//debug code to check the time between 2 readings from magnetic sensor
     timeBL=timeAL;
-   }
+  }
    if(timeL>50)
    {
-   speedL=(60000/timeL);
-   k = distance/timeL;
-   //delay(100);
-   //println("SPEED=",speedL);
+     speedL=(60000/timeL);
+     k = distance/timeL;
+     //delay(100);
+     //println("SPEED=",speedL);
  
-   lastSpeedL=speedL;
-      }
+     lastSpeedL=speedL;
+   }
+      
    brightnessL = 250 - (speedL);
    fill(0, 0, 0, brightnessL); 
    rect(0, 0, width/2, height);
@@ -61,17 +62,18 @@ void brightnessControlRight()// function to control brightness of the right half
     timeBR=timeAR;
     brightnessTimeRB=0;
    }
-   if(timeR>50)
-   {
-   speedR=(60000/timeR);
-   j = distance/timeR;
-   //delay(100);
-   //println("SPEED=",speedR);
+  if(timeR>50)
+  {
+    speedR=(60000/timeR);
+    j = distance/timeR;
+    //delay(100);
+    //println("SPEED=",speedR);
  
-   lastSpeedR=speedR;
-   }
-   brightnessR = 250 - (speedR);
-   fill(0, 0, 0, brightnessR); 
-   rect(width/2, 0, width, height);
+    lastSpeedR=speedR;
+  }
+  
+  brightnessR = 250 - (speedR);
+  fill(0, 0, 0, brightnessR); 
+  rect(width/2, 0, width, height);
 }
 

@@ -84,11 +84,7 @@ void leftBar()//function to form the Left power bar controlled by the speed of t
     }
   }
 }
-//CODE FOR FULLSCREEN
-/*
-boolean sketchFullScreen() {
-  return true;
-}*/
+
 
 //FUNCTION TO MAKE GAME RESIZABLE
 void makeResizable()
@@ -98,3 +94,9 @@ if (frame != null) //resize code
     frame.setResizable(true);
     }
 }  
+
+//CODE FOR FULLSCREEN
+/*
+boolean sketchFullScreen() {
+  return true;
+}*/

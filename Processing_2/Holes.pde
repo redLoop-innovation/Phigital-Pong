@@ -1,22 +1,22 @@
 //THIS TAB DRAWS THE HOLES WITHIN THE GAME AND CONTAINS FUNCTIONS TO UPDATE SCORE AND DISAPPEAR THE BALL WHEN IT GOES INTO THE HOLE
 
 //LEFT SIDE HOLES
-int hole1Xposition = 450;
-int hole1Yposition = 280;
-int hole1radius = 60;
+int hole1Xposition=-2000;
+int hole1Yposition;
+int hole1radius=60;
 
-int hole2Xposition = 350;
-int hole2Yposition = 150;
-int hole2radius = 40;
+int hole2Xposition=-2000;
+int hole2Yposition;
+int hole2radius=60;
 
 //RIGHT SIDE HOLES
-int hole3Xposition = 1380;
-int hole3Yposition = 990;
+int hole3Xposition=-2000;
+int hole3Yposition;
 int hole3radius = 60;
 
-int hole4Xposition = 650;
-int hole4Yposition = 420;
-int hole4radius = 40;
+int hole4Xposition=-2000;
+int hole4Yposition;
+int hole4radius = 60;
 
 void holeSystem()
 {
@@ -37,7 +37,7 @@ void holeSystem()
       deltaY=-5;
     }
   } 
- /*ellipse(hole2Xposition,hole2Yposition,hole2radius*2,hole2radius*2);
+ ellipse(hole2Xposition,hole2Yposition,hole2radius*2,hole2radius*2);
  if((X-ballW/2<hole2Xposition)&&(X+ballW/2>hole2Xposition))
   {
     if ((Y>=hole2Yposition-hole2radius)&&(Y<=hole2Yposition+hole2radius))
@@ -52,7 +52,7 @@ void holeSystem()
       deltaX=3;
       deltaY=-3;
     }
-  } */
+  } 
 
  //RIGHT HOLES
  ellipse(hole3Xposition,hole3Yposition,hole3radius*2,hole3radius*2);
@@ -71,7 +71,7 @@ void holeSystem()
       deltaY=5;
     }
   }
-  /*ellipse(hole4Xposition,hole4Yposition,hole4radius*2,hole4radius*2);
+ ellipse(hole4Xposition,hole4Yposition,hole4radius*2,hole4radius*2);
  if((X-ballW/2<hole4Xposition)&&(X+ballW/2>hole4Xposition))
   {
     if ((Y>=hole4Yposition-hole4radius-7)&&(Y<=hole4Yposition+hole4radius-7))
@@ -86,12 +86,7 @@ void holeSystem()
       deltaX=-3;
       deltaY=3;
     }
-  }*/  
- //ellipse(200,400,12,12);
- //ellipse(200,400,12,12);
- //ellipse(200,400,12,12);
- //ellipse(200,400,12,12);
- //ellipse(200,400,12,12);
+  }  
    
 }
 

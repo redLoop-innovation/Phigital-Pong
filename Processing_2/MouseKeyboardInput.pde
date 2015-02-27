@@ -3,14 +3,16 @@
 
 /*
 CONTROLS: 
-1. PRESS LEFT OR RIGHT TO MOVE THE LEFT PADDLE
-2. PRESS UP OR DOWN TO MOVE THE RIGHT PADDLE
-3. PRESS W OR S TO MOVE THE LEFT PADDLE
-4. PRESS LEFT OR RIGHT TO TEST THE RIGHT POWER BAR
-5. PRESS UP OR DOWN TO TEST THE LEFT POWER BAR
-6. PRESS R TO RESET THE GAME
-7. HOLD 1 AND MOVE THE MOUSE TO SET THE LEFT HOLE
-8. HOLD 2 AND MOVE THE MOUSE TO SET THE RIGHT HOLE
+1.  PRESS LEFT OR RIGHT TO MOVE THE LEFT PADDLE
+2.  PRESS UP OR DOWN TO MOVE THE RIGHT PADDLE
+3.  PRESS W OR S TO MOVE THE LEFT PADDLE
+4.  PRESS LEFT OR RIGHT TO TEST THE RIGHT POWER BAR
+5.  PRESS UP OR DOWN TO TEST THE LEFT POWER BAR
+6.  PRESS R TO RESET THE GAME
+7.  HOLD 1 AND MOVE THE MOUSE TO SET THE FIRST HOLE
+8.  HOLD 2 AND MOVE THE MOUSE TO SET THE SECOND HOLE
+9.  HOLD 1 AND MOVE THE MOUSE TO SET THE THIRD HOLE
+10. HOLD 2 AND MOVE THE MOUSE TO SET THE FOURTH HOLE
 */
 
 void keyPressed()//function to control the paddles using arrow keys on the keyboard and test the power barrs using arrow keys
@@ -55,8 +57,18 @@ void keyPressed()//function to control the paddles using arrow keys on the keybo
     }      
     if(key=='2')
     {
-      hole3Xposition = mouseX;//line to control the hole on the right side with mouse
-      hole3Yposition = mouseY;//line to control the hole on the right side with mouse
+      hole2Xposition = mouseX;//line to control the hole on the right side with mouse
+      hole2Yposition = mouseY;//line to control the hole on the right side with mouse
+    }     
+    if(key=='3')
+    {
+      hole3Xposition = mouseX;//line to control the hole on the left side with mouse
+      hole3Yposition = mouseY;//line to control the hole on the left side with mouse
+    }      
+    if(key=='4')
+    {
+      hole4Xposition = mouseX;//line to control the hole on the right side with mouse
+      hole4Yposition = mouseY;//line to control the hole on the right side with mouse
     }     
 if (key == CODED) //if statement to test the right power bar 
   {
