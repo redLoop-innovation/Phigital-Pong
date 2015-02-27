@@ -10,10 +10,10 @@ CONTROLS:
 4.  PRESS LEFT OR RIGHT TO TEST THE RIGHT POWER BAR
 5.  PRESS UP OR DOWN TO TEST THE LEFT POWER BAR
 6.  PRESS R TO RESET THE GAME
-7.  HOLD 1 AND MOVE THE MOUSE TO SET THE FIRST HOLE
-8.  HOLD 2 AND MOVE THE MOUSE TO SET THE SECOND HOLE
-9.  HOLD 1 AND MOVE THE MOUSE TO SET THE THIRD HOLE
-10. HOLD 2 AND MOVE THE MOUSE TO SET THE FOURTH HOLE
+7.  HOLD 1 AND MOVE THE MOUSE TO SET THE FIRST HOLE : IMPORTANT - THIS HOLE UPDATES THE SCORE ON THE LEFT SO ONLY USE IT ON THE LEFT SIDE OF THE CENTER LINE
+8.  HOLD 2 AND MOVE THE MOUSE TO SET THE SECOND HOLE : IMPORTANT - THIS HOLE UPDATES THE SCORE ON THE LEFT SO ONLY USE IT ON THE LEFT SIDE OF THE CENTER LINE
+9.  HOLD 1 AND MOVE THE MOUSE TO SET THE THIRD HOLE : IMPORTANT - THIS HOLE UPDATES THE SCORE ON THE RIGHT SO ONLY USE IT ON THE RIGHT SIDE OF THE CENTER LINE
+10. HOLD 2 AND MOVE THE MOUSE TO SET THE FOURTH HOLE : IMPORTANT - THIS HOLE UPDATES THE SCORE ON THE RIGHT SO ONLY USE IT ON THE RIGHT SIDE OF THE CENTER LINE
 */
 
 int screenWidth=1600;//adjust this to change the width of the game
@@ -49,7 +49,7 @@ void draw()
   //goFullscreen();//function to make the game fullscreen : Refer to display tab
   display();//function to define the display of the projection. This includes the score, power bar, line in the middle and the aesthetic lines to seperate evrything : Refer to Display Tab
   //speedControl();//function to change the speed of the ball according to the rate at which the rider paddles the bike : Refer to SpeedControl Tab
-  holeSystem();//function to add holes to the game : Refer to Holes Tab
+  holeSystem();//function to add and control holes in the game : Refer to Holes Tab
   ballMovement();//function to make the ball move : Refer to Ball Tab
   paddles();//function to define the paddles on each side : Refer to Paddles Tab
   //brightnessControlLeft();//function to change the brightness of left side of the screen : Refer to BrightnessControl Tab

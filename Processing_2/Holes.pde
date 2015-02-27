@@ -3,28 +3,28 @@
 //LEFT SIDE HOLES
 int hole1Xposition=-2000;
 int hole1Yposition;
-int hole1radius=60;
+int hole1radius=60;//adjust this variable to change the radius of the first hole
 
 int hole2Xposition=-2000;
 int hole2Yposition;
-int hole2radius=60;
+int hole2radius=60;//adjust this variable to change the radius of the second hole
 
 //RIGHT SIDE HOLES
 int hole3Xposition=-2000;
 int hole3Yposition;
-int hole3radius = 60;
+int hole3radius = 60;//adjust this variable to change the radius of the third hole
 
 int hole4Xposition=-2000;
 int hole4Yposition;
-int hole4radius = 60;
+int hole4radius = 60;//adjust this variable to change the radius of the fourth hole
 
-void holeSystem()
+void holeSystem()//this function contains code to draw the craters in game and algorithm to update score and make the ball disappear when it goes inside a crater
 {
  //LEFT HOLES 
  ellipse(hole1Xposition,hole1Yposition,hole1radius*2,hole1radius*2);
- if((X-ballW/2<hole1Xposition)&&(X+ballW/2>hole1Xposition))
+ if((ballRight()>=hole1Xposition-hole1radius+ballW)&&(ballLeft()<=hole1Xposition+hole1radius-ballW))
   {
-    if ((Y>=hole1Yposition-hole1radius)&&(Y<=hole1Yposition+hole1radius))
+    if ((ballBottom()>=hole1Yposition-hole1radius+ballH)&&(ballTop()<=hole1Yposition+hole1radius-ballH))
     {
       scoreL=scoreL+1;
       noLoop();
@@ -38,9 +38,9 @@ void holeSystem()
     }
   } 
  ellipse(hole2Xposition,hole2Yposition,hole2radius*2,hole2radius*2);
- if((X-ballW/2<hole2Xposition)&&(X+ballW/2>hole2Xposition))
+ if((ballRight()>=hole2Xposition-hole2radius+ballW)&&(ballLeft()<=hole2Xposition+hole2radius-ballW))
   {
-    if ((Y>=hole2Yposition-hole2radius)&&(Y<=hole2Yposition+hole2radius))
+    if ((ballBottom()>=hole2Yposition-hole2radius+ballH)&&(ballTop()<=hole2Yposition+hole2radius-ballH))
     {
       scoreL=scoreL+1;
       noLoop();
@@ -56,9 +56,9 @@ void holeSystem()
 
  //RIGHT HOLES
  ellipse(hole3Xposition,hole3Yposition,hole3radius*2,hole3radius*2);
- if((X-ballW/2<hole3Xposition)&&(X+ballW/2>hole3Xposition))
+ if((ballRight()>=hole3Xposition-hole3radius+ballW)&&(ballLeft()<=hole3Xposition+hole3radius-ballW))
   {
-    if ((Y>=hole3Yposition-hole3radius)&&(Y<=hole3Yposition+hole3radius))
+    if ((ballBottom()>=hole3Yposition-hole3radius+ballH)&&(ballTop()<=hole3Yposition+hole3radius-ballH))
     {
       scoreR=scoreR+1;
       noLoop();
@@ -72,9 +72,9 @@ void holeSystem()
     }
   }
  ellipse(hole4Xposition,hole4Yposition,hole4radius*2,hole4radius*2);
- if((X-ballW/2<hole4Xposition)&&(X+ballW/2>hole4Xposition))
+ if((ballRight()>=hole4Xposition-hole4radius+ballW)&&(ballLeft()<=hole4Xposition+hole4radius-ballW))
   {
-    if ((Y>=hole4Yposition-hole4radius-7)&&(Y<=hole4Yposition+hole4radius-7))
+    if ((ballBottom()>=hole4Yposition-hole4radius+ballH)&&(ballTop()<=hole4Yposition+hole4radius-ballH))
     {
       scoreR=scoreR+1;
       noLoop();
