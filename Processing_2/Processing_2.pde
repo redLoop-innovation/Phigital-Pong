@@ -1,14 +1,14 @@
 //THIS IS THE MAIN BODY OF THIS GAME AND INCLUDES ALL THE FUNCTIONS THAT RUN THE GAME. TO ADJUST ANYTHING READ COMMENTS AFTER EVERY FUNCTION
 
 //IMPORTANT: TO CHANGE THE SCORE AT WHICH THE GAME ENDS ADJUST endScore VARIABLE IN THE SCORE TAB
+int screenWidth=1600;//adjust this to change the width of the game
+int screenHeight=800;//adjust this to change the height of the game
 
 void setup()
 {
   
   arduino = new Arduino(this, Arduino.list()[0], 57600);//code to define the data rate and arduino com - Note: In Arduino.list()[0], 0 is the com port. By default 0 detects the com port automatically
-  size(1280, 760);//size of the window
-  XpaddleL=40;//setting the X coordinate of left paddle after the size of the window is set
-  XpaddleR=width-40;//setting the X coordinate of right paddle after the size of the window is set
+  size(screenWidth, screenHeight);//size of the window
   X=width/2;//starting starting x coordinate of the ball
   Y=height/2;//starting starting y coordinate of the ball
   arduino.pinMode(2, Arduino.INPUT);//setting the arduino input for magnetic sensor
@@ -34,7 +34,7 @@ void draw()
   //goFullscreen();//function to make the game fullscreen : Refer to display tab
   display();//function to define the display of the projection. This includes the score, power bar, line in the middle and the aesthetic lines to seperate evrything : Refer to Display Tab
   //speedControl();//function to change the speed of the ball according to the rate at which the rider paddles the bike : Refer to SpeedControl Tab
-  //holeSystem();//function to add holes to the game : Refer to Holes Tab
+  holeSystem();//function to add holes to the game : Refer to Holes Tab
   ballMovement();//function to make the ball move : Refer to Ball Tab
   paddles();//function to define the paddles on each side : Refer to Paddles Tab
   //brightnessControlLeft();//Function to change the brightness of left side of the screen : Refer to BrightnessControl Tab

@@ -1,3 +1,6 @@
+//THIS TAB DRAWS THE PADDLES FOR THE GAME
+//ADJUST THE VARIABLES HERE TO CHANGE THE SHAPE AND SIZE OF THE PADDLES
+
 float paddleEdgeDistance=30;//distance of both paddles from the left and right end of the screen
 
 float paddleLW=30;//width of the left paddle

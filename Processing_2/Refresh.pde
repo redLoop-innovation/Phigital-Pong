@@ -1,26 +1,28 @@
+//THIS TAB CONTAINS THE REFRESH FUNCTION WHICH REFRESHES THE GAME ADTER EVERY POINT
+
+int pointDelay=500;//adjust this to change the delay after every point
+
 void refresh()
 {
   if(X<0)
   {
     noLoop();
-    delay(500);
-    //if (arduino.digitalRead(5) == Arduino.HIGH)
-    loop();
-    X=width/2;
-    Y=height/2;
-    deltaX=5;
-    deltaY=-5;
-  }
-  if(ballRight()>width)
-  {
-    noLoop();
-    delay(500);
-    //if (arduino.digitalRead(6) == Arduino.HIGH)
+    delay(pointDelay);
     loop();
     X=width/2;
     Y=height/2;
     deltaX=-5;
     deltaY=5;
+  }
+  if(ballRight()>width)
+  {
+    noLoop();
+    delay(500);
+    loop();
+    X=width/2;
+    Y=height/2;
+    deltaX=5;
+    deltaY=-5;
   }
 }
  /* if ((ballRight()>width)||(X<0))//if statement to end the game

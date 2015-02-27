@@ -54,7 +54,10 @@ if (key == CODED) {
   }
 }
 
-/*void mouseMoved()//function to control the right paddle using mouse. Note: Change YpaddleR to YpaddleL to control the left paddle
+void mouseMoved()//function to control the right paddle using mouse and test the holes. Note: Change YpaddleR to YpaddleL to control the left paddle
 {
-  YpaddleR = mouseY;
-}*/
+  //YpaddleR = mouseY;
+  
+  hole1Xposition = mouseX;//line to control the left side hole with mouse
+  hole1Yposition = mouseY;//line to control the left side hole with mouse
+}
